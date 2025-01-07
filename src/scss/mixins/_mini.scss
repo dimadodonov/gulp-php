@@ -1,5 +1,7 @@
 /* stylelint-disable */
 
+@use "sass:math";
+
 @mixin bg-cover {
   background-position: center;
   background-size: cover;
@@ -9,7 +11,7 @@
 $browser-context: 16; // Default
 
 @function rem($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}rem;
+  @return #{math.div($pixels, $context)}rem;
 }
 
 @mixin image-set($pathToImage) {
