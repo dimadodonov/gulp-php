@@ -44,6 +44,5 @@ export { dev }
 export { build }
 export { backend }
 export { cache }
-export { zip }
 
 gulp.task('default', dev);
